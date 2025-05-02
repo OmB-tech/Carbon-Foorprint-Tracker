@@ -94,14 +94,14 @@ export default function HarshReality() {
               <CardHeader className="pb-2">
                 <CardTitle className="text-2xl flex items-center">
                   {currentFact.icon}
-                  <span className="ml-3">{currentFact.title}</span>
+                  <span className="ml-3 text-black font-bold">{currentFact.title}</span>
                 </CardTitle>
                 <CardDescription>Swipe or use the buttons to see more facts</CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col justify-between h-[calc(100%-5rem)]">
-                <p className="text-xl leading-relaxed">{currentFact.description}</p>
+                <p className="text-xl leading-relaxed text-black">{currentFact.description}</p>
 
-                <div className="flex justify-between items-center mt-8">
+                <div className="flex justify-between items-center mt-8 mb-2">
                   <Button
                     variant="outline"
                     onClick={() => setCurrentFactIndex((prev) => (prev - 1 + facts.length) % facts.length)}
@@ -109,7 +109,7 @@ export default function HarshReality() {
                     Previous
                   </Button>
 
-                  <div className="flex space-x-1">
+                  <div className="flex space-x-1 text-black">
                     {facts.map((_, index) => (
                       <button
                         key={index}
